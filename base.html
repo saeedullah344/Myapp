@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}| Myapp</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <a><img src="/static/img/logo.png" alt="Myapp"></a>
+        </div>
+         {% comment %} {request.path} is showing the position of active link {% endcomment %}
+        <ul>
+            <li class="{% if request.path == '/' %} active {% endif %}" ><a href="/">Home</a></li>
+            <li class="{% if request.path == '/blog/' %} active {% endif %}"><a href="/blog">Blog</a></li>
+            <li class="{% if request.path == '/services/' %} active {% endif %}"><a href="/services">Services</a></li>
+            <li class="{% if request.path == '/about/' %} active {% endif %}"><a href="/about">About</a></li>
+            <li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    {% block body %} {% endblock body %}
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            Copyright &copy; www.myapp.com. All right reserverd
+        </div>
+    </footer>
+</body>
+
+</html>

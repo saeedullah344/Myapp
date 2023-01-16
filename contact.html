@@ -1,0 +1,60 @@
+{% extends 'base.html' %} {% block title %} Blog Page {% endblock title %} {% block body %}
+<link rel="stylesheet" href="/static/css/contact.css">
+<section id="contact_section">
+    <div class="form">
+        <form action="">
+            <div class="form_container">
+                <div class="label">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Enter Your Name" id="name" name="name">
+                </div>
+            </div>
+            <div class="form_container">
+                <div class="label">
+                    <label for="Email">Email:</label>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Enter Your Email" id="Email" name="Email">
+                </div>
+            </div>
+            <div class="form_container">
+                <div class="label">
+                    <label for="Phone">Phone:</label>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Enter Your Phone" id="Phone" name="Phone">
+                </div>
+            </div>
+            <div class="form_container">
+                <div class="label">
+                    <label for="Password">Password:</label>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Enter Your Password" id="Password" name="Password">
+                </div>
+            </div>
+            <div class="form_container">
+                <div class="label">
+                    <label for="Message">Message:</label>
+                </div>
+                <div class="input">
+                    <textarea name="textarea" id="Message" cols="5" rows="6"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="submit">
+                    Submite
+                </button>
+                <button type="reset">
+                    Reset
+                </button>
+            </div>
+        </form>
+    </div>
+
+</section>
+
+
+{% endblock body %}
